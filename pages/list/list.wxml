@@ -1,0 +1,60 @@
+<!--pages/list/list.wxml-->
+<wxs module="hotel" src="../../utils/time.wxs"></wxs>
+<view class="tab-content">
+  <view class="index">
+
+    <view class="index_article" wx:if="{{posts.length>0}}">
+      <block wx:for="{{posts}}" wx:for-index="i" wx:key="item">
+        <view class="title-background">
+          <block wx:if="{{i%5 == 0}}">
+            <view bindtap="bindDetail" id="{{item.id}}">
+              <view style="position: relative;height: 380rpx">
+                <image mode="aspectFill" class="index_article_cover" src="{{item.meta.thumbnail}}"></image>
+              </view>
+              <view class="index_article_title">{{item.title.rendered}}
+                <view class="source">
+                  <view class="post-data">
+                    <image src="../../images/viewl.png"></image>
+                    <text> {{item.meta.views}}</text>
+                  </view>
+                  <view class="source-info">
+                    <text>{{hotel.M(item.date)}}月{{hotel.D(item.date)}}日</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="advert" wx:if="{{advert.type == 'unit'}}">
+              <ad unit-id="{{advert.code}}"></ad>
+            </view>
+          </block>
+          <block wx:else>
+            <view bindtap="bindDetail" id="{{item.id}}">
+              <view style="position: relative;height: 380rpx">
+                <image mode="aspectFill" class="index_article_cover" src="{{item.meta.thumbnail}}"></image>
+              </view>
+              <view class="index_article_title">{{item.title.rendered}}
+                <view class="source">
+                  <view class="post-data">
+                    <image src="../../images/viewl.png"></image>
+                    <text> {{item.meta.views}}</text>
+                  </view>
+                  <view class="source-info">
+                    <text>{{hotel.M(item.date)}}月{{hotel.D(item.date)}}日</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </block>
+    </view>
+    <view class="index_article" wx:if="{{isLastPage&&posts.length==0}}">
+      <view style="position: relative;height: 380rpx">
+        <image mode="aspectFill" class="index_article_cover" src="../../images/404.png"></image>
+      </view>
+      <view class="last_text">对不起! 你查看的内容没有找到</view>
+    </view>
+    <view class="last_text" wx:if="{{isLastPage&&posts.length>0}}">已经到底啦~</view>
+    <view class="last_text" wx:if="{{!isLastPage&&posts.length>0}}">努力加载中...</view>
+  </view>
+</view>

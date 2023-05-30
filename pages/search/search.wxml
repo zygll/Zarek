@@ -1,0 +1,11 @@
+<view class="page {{isIphoneX?'iphone-x':''}}">
+  <view class="banner">
+    <image class="banner-bg" mode="widthFix" src="https://www.zygll.com/wp-content/uploads/unnamed-file-scaled.jpg"></image>
+    <view class="index-search container-class">
+      <image class="search-icon icon-class" src="../../images/search2.png"></image>
+      <input bindconfirm="onConfirm" bindinput="onInput" class="search-input input-class" confirmType="search" focus="{{autoFocus}}" placeholder="{{placeHolder}}" placeholderClass="search-input-placeholder" value="{{searchKey}}" wx:if="{{inputEnable}}"></input>
+      <view class="search-input" wx:else>{{placeHolder}}</view>
+      <image bindtap="onClear" class="close-btn" src="../../images/close.png" wx:if="{{searchKey}}"></image>
+    </view>
+  </view>
+</view>

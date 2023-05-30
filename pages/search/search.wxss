@@ -1,0 +1,84 @@
+
+page {
+  background: #f5f7f7;
+}
+
+.page.iphone-x {
+  padding-bottom: 20rpx;
+}
+
+.banner {
+  width: 100vw;
+  height: auto;
+  z-index: 0;
+}
+
+.banner-bg {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+}
+
+.index-search {
+  position: absolute;
+  bottom: -44rpx;
+  left: 40rpx;
+  right: 40rpx;
+  border-radius: 44rpx;
+  box-shadow: 0 4rpx 20rpx 2rpx #fbebd4;
+}
+
+.index-search {
+  display: flex;
+  flex-flow: row;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 44rpx;
+  height: 88rpx;
+  justify-content: center;
+  align-items: center;
+  padding: 24rpx;
+  box-sizing: border-box;
+  opacity: 80%;
+  margin: auto;
+  left: 24prx;
+  right: 24prx;
+  top: 0;
+  bottom: 0;
+}
+
+.search-icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 33rpx;
+  height: 33rpx;
+  background-size: contain;
+}
+
+.search-input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #a8a8a8;
+}
+
+input.search-input {
+  color: #222;
+}
+
+search-input-placeholder {
+  color: #a8a8a8;
+}
+
+.close-btn {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 24rpx;
+  border-radius: 50%;
+  opacity: 0.4;
+}
