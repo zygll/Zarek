@@ -36,7 +36,7 @@ function strNumDiscode(str){
     str = str.replace(/&oplus;/g, '⊕');
     str = str.replace(/&otimes;/g, '⊗');
     str = str.replace(/&perp;/g, '⊥');
-    str = str.replace(/&sdot;/g, '⋅');    
+    str = str.replace(/&sdot;/g, '⋅');
     return str;
 }
 
@@ -106,25 +106,19 @@ function strcharacterDiscode(str){
     str = str.replace(/&nbsp;/g, ' ');
     str = str.replace(/&quot;/g, "'");
     str = str.replace(/&amp;/g, '&');
-    // str = str.replace(/&lt;/g, '‹');
-    // str = str.replace(/&gt;/g, '›');
 
-    str = str.replace(/&lt;/g, '<');
-    str = str.replace(/&gt;/g, '>');
+     str = str.replace(/&lt;/g, '‹');
+     str = str.replace(/&gt;/g, '›');
+
+    str = str.replace(/&lt;/g, '‹');
+    str = str.replace(/&gt;/g, '›');
+
+    //str = str.replace(/&lt;/g, '<');
+    //str = str.replace(/&gt;/g, '>');
     str = str.replace(/&#8226;/g, '•');
-    str = str.replace(/&/g, '&');
-    str = str.replace(/&#8221;/g, '"');
-    str = str.replace(/&#8216;/g, '\'');
-    str = str.replace(/&#8217;/g, '\'');
-    str = str.replace(/&#x27;/g, '\'');
-    str = str.replace(/&#8230;/g, '...');
-    str = str.replace(/&#8220;/g, '"');
-    str = str.replace(/&#038;/g, '&');
-    str = str.replace(/&#8211;/g, '-');
-    str = str.replace(/&#8212;/g, '--');
-   
-
-
+    str = str.replace(/↵/g, '\n');
+   // console.log('character转义完成')
+   // console.log(str)
     return str;
 }
 
@@ -188,19 +182,19 @@ function strOtherDiscode(str){
 }
 
 function strMoreDiscode(str){
-    str = str.replace(/\r\n/g,"");  
-    str = str.replace(/\n/g,"");
+   // str = str.replace(/\r\n/g,"$1");  
+   // str = str.replace(/\n/g, '$1');
 
-    //str = str.replace(/code/g,"wxxxcode-style");
+  //  str = str.replace(/code/g,"wxxxcode-style");
     return str;
 }
 
 function strDiscode(str){
     str = strNumDiscode(str);
-    str = strGreeceDiscode(str);
-    str = strcharacterDiscode(str);
+    str = strGreeceDiscode(str);   
     str = strOtherDiscode(str);
-    //str = strMoreDiscode(str);
+    str = strMoreDiscode(str);
+    str = strcharacterDiscode(str);
     return str;
 }
 function urlToHttpUrl(url,rep){

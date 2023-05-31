@@ -23,15 +23,24 @@
       <text class="time" style='width:100rpx;height:40rpx;background:#f3f3f3'>{{detail.time}}</text>
     </view>
   </view>
-  <view id="entry-content" wx:if="{{article.nodes}}" class="entry-content clearfix">
-    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  <view class='contarin' wx:if="{{article.nodes}}" id="entry-content" >
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
   </view>
+  <!-- <view id="entry-content" wx:if="{{article.nodes}}" class="entry-content clearfix">
+    
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>  -->
+
   <view id="entry-content" wx:else class="entry-content clearfix">
     <view style='padding-top:20rpx' wx:for="article" wx:key="index">
       <view style='width:690rpx;height:40rpx;background:#f3f3f3'></view>
       <view style='width:690rpx;height:250rpx;background:#f3f3f3;margin-top:20rpx'></view>
     </view>
   </view>
+
+  <!-- <view style="    overflow-y: auto;">
+    <rich-text nodes="{{content}}"></rich-text>
+  </view> -->
   <view class="advert" wx:if="{{advert.type == 'unit'}}">
     <ad unit-id="{{advert.code}}"></ad>
   </view>

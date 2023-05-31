@@ -111,7 +111,8 @@ Page({
         id: id,
         detail: res
       })
-      WxParse.wxParse('article', 'html', res.content.rendered, this, 5);
+      // WxParse.wxParse('article', 'md', res.content.rendered, this, 5);
+      WxParse.wxParse('article', 'html', res.content.rendered, this, 20);
       if (res.comments != 0) {
         this.getComments()
       }

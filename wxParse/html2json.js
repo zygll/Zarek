@@ -11,10 +11,10 @@
  * for: 微信小程序富文本解析
  * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
  */
-
+var highlight = require('./highlight.js')
 var __placeImgeUrlHttps = "https";
 var __emojisReg = '';
-var __emojisBaseSrc = '';
+var __emojisBaseSrc = ''
 var __emojis = {};
 var wxDiscode = require('./wxDiscode.js');
 var HTMLParser = require('./htmlparser.js');
@@ -35,6 +35,8 @@ var fillAttrs = makeMap("checked,compact,declare,defer,disabled,ismap,multiple,n
 
 // Special Elements (can contain anything)
 var special = makeMap("wxxxcode-style,script,style,view,scroll-view,block");
+
+
 function makeMap(str) {
     var obj = {}, items = str.split(",");
     for (var i = 0; i < items.length; i++)
@@ -55,7 +57,7 @@ function removeDOCTYPE(html) {
 
 function trimHtml(html) {
   return html
-        .replace(/\n+/g, '')
+       // .replace(/\r?\n+/g, '')
         .replace(/<!--.*?-->/ig, '')
         .replace(/\/\*.*?\*\//ig, '')
         .replace(/[ ]+</ig, '<')
@@ -66,7 +68,9 @@ function html2json(html, bindName) {
     //处理字符串
     html = removeDOCTYPE(html);
     html = trimHtml(html);
+    
     html = wxDiscode.strDiscode(html);
+    html = highlight.highlight(html);
     //生成node节点
     var bufArray = [];
     var results = {
@@ -116,7 +120,7 @@ function html2json(html, bindName) {
                     // has multi attibutes
                     // make it array of attribute
                     if (name == 'style') {
-                        //console.dir(value);
+                       // console.dir(value);
                         //  value = value.join("")
                         node.styleStr = value;
                     }
@@ -184,7 +188,7 @@ function html2json(html, bindName) {
             }
             
             if (unary) {
-                // if this tag dosen't have end tag
+                // if this tag doesn't have end tag
                 // like <img src="hoge.png"/>
                 // add to parents
                 var parent = bufArray[0] || results;
@@ -205,7 +209,7 @@ function html2json(html, bindName) {
             //当有缓存source资源时于于video补上src资源
             if(node.tag === 'video' && results.source){
                 node.attr.src = results.source;
-                delete result.source;
+                delete results.source;
             }
             
             if (bufArray.length === 0) {
@@ -227,6 +231,8 @@ function html2json(html, bindName) {
             };
             
             if (bufArray.length === 0) {
+                node.index = index.toString()
+                index += 1
                 results.nodes.push(node);
             } else {
                 var parent = bufArray[0];
@@ -256,7 +262,9 @@ function html2json(html, bindName) {
 function transEmojiStr(str){
   // var eReg = new RegExp("["+__reg+' '+"]");
 //   str = str.replace(/\[([^\[\]]+)\]/g,':$1:')
-  
+  str = str.replace(/&lt;/g, '<');
+  str = str.replace(/&gt;/g, '>');
+  str = str.replace(/&amp;/g, '&');
   var emojiObjs = [];
   //如果正则表达式为空
   if(__emojisReg.length == 0 || !__emojis){
@@ -268,6 +276,7 @@ function transEmojiStr(str){
   }
   //这个地方需要调整
   str = str.replace(/\[([^\[\]]+)\]/g,':$1:')
+  
   var eReg = new RegExp("[:]");
   var array = str.split(eReg);
   for(var i = 0; i < array.length; i++){

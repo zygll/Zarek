@@ -32,7 +32,7 @@ Page({
       }
     });
     this.getSiteInfo();
-    this.getStickyPosts();
+    // this.getStickyPosts();
     this.getCategories({per_page:2});
     this.getAdvert();
     this.getPostList({ categories: '1' });

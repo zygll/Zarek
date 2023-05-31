@@ -23,7 +23,7 @@ const getPostsList = function(data) {
 
 // 文章详情
 const getPostsbyID = function(id){
-	return API.get('/wp-json/wp/v2/posts/'+id, {}, { token:true });   
+	return API.get('/wp-json/wp/v2/posts/'+id, {}, { token:false });   
 }
 
 // 页面列表

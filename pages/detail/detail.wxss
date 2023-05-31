@@ -1,11 +1,15 @@
 /* pages/detail/detail.wxss */
 @import "../../wxParse/wxParse.wxss";
 @import "../../wxParse/icon.wxss";
-
+@import '/highlight/prism.wxss';
 .flex {
   display: flex;
 }
-
+.contarin{
+  margin: 0 40rpx;
+  color: #333;
+  background: #fff;
+}
 @-webkit-keyframes infinite-move {
   from {
     opacity: 1;

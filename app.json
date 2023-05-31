@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/index2/index2",
     "pages/detail/detail",
     "pages/list/list",
@@ -21,13 +20,13 @@
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
+ 
       {
         "text": "首页",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index2/index2",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home_on.png"
       },
-  
       {
         "text": "专题",
         "pagePath": "pages/category/category",
