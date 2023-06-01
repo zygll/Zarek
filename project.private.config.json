@@ -3,6 +3,8 @@
   "projectname": "JG2.0.0",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
-  }
+    "urlCheck": true,
+    "bigPackageSizeSupport": true
+  },
+  "libVersion": "2.32.1"
 }

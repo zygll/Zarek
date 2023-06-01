@@ -2,6 +2,7 @@
 
 page {
     background: #fff;
+    /* touch-action: none; */
 }
 
 .page.iphone-x {
@@ -492,6 +493,7 @@ search-input-placeholder {
   width: 200rpx;
   height: 160rpx;
   border-radius: 10rpx;
+  flex: 0 0 30%;
 }
 
 .post-desc {
@@ -508,6 +510,7 @@ search-input-placeholder {
 }
 
 .post-title>text {
+  
   font-size: 30rpx;
   line-height: 1.6;
   font-weight: 500;
@@ -552,10 +555,21 @@ search-input-placeholder {
   z-index: 9;
   color: #fff;
 }
-.avatarInfo .name{
+.homename{
+  text-align: center;
   font-size: 48rpx;
+  z-index: 999;
+  color: #fff;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  font-weight: 900;
+  font-family: 'JinBuTi';
 }
+
 .description{
   text-align: center;
-  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-weight: 300;
+  font-family: 'SmileySans';
 }

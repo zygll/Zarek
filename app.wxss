@@ -1,6 +1,31 @@
 /**app.wxss**/
 @import "icon.wxss";
 @import "colorui.wxss";
+
+
+@font-face {
+  font-family: 'Nabla';
+  src: url('http://zygll.com/wp-content/uploads/Nabla.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'JinBuTi';
+  src: url('http://zygll.com/wp-content/uploads/JinBuTi.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'SmileySans';
+  src: url('http://zygll.com/wp-content/uploads/SmileySans.ttf') format('truetype');
+}
+
+text{
+  font-family: 'JinBuTi';
+}
+page,view{
+  font-family: 'JinBuTi';
+}
 .container {
   height: 100%;
   display: flex;

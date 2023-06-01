@@ -2,11 +2,12 @@
 <wxs module="hotel" src="../../utils/time.wxs"></wxs>
 <view class="page {{isIphoneX?'iphone-x':''}}">
   <view class="banner">
-    <view class="avatarInfo">
-  <view>
-    <view class="name">
+    <view class="homename">
           {{siteInfo.name}}
         </view>
+    <view class="avatarInfo">
+  <view>
+ 
         <view class="description">
           {{siteInfo.description}}
         </view>
