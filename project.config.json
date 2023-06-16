@@ -19,7 +19,7 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "condition": false,
+    "condition": true,
     "uglifyFileName": true
   },
   "compileType": "miniprogram",
@@ -33,6 +33,5 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
-  "cloudfunctionRoot": "cloudfunctions/"
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
 }
