@@ -1,0 +1,27 @@
+<!--pages/tool/tool.wxml-->
+<view class="page-container">
+  <view class="item">
+    <view class="pic">
+      <image mode="aspectFit" src="/images/ask.png" mode="" />
+    </view>
+    <text>计算器</text>
+  </view>
+  <view class="item">
+    <view class="pic">
+      <image mode="aspectFit" src="/images/ask.png" mode="" />
+    </view>
+    <text>计算器</text>
+  </view>
+  <view class="item">
+    <view class="pic">
+      <image mode="aspectFit" src="/images/ask.png" mode="" />
+    </view>
+    <text>计算器</text>
+  </view>
+  <view class="item">
+    <view class="pic">
+      <image mode="aspectFit" src="/images/ask.png" mode="" />
+    </view>
+    <text>计算器</text>
+  </view>
+</view>

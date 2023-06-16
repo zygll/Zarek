@@ -3,13 +3,14 @@
 <view class="page {{isIphoneX?'iphone-x':''}}">
   <view class="banner">
     <view class="homename">
-          {{siteInfo.name}}
+          <!-- {{siteInfo.name}} -->
+  <ec-canvas   id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
         </view>
     <view class="avatarInfo">
   <view>
  
         <view class="description">
-          {{siteInfo.description}}
+          {{typing}}
         </view>
    
   </view>

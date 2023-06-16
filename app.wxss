@@ -2,30 +2,30 @@
 @import "icon.wxss";
 @import "colorui.wxss";
 
-
+/* 
 @font-face {
   font-family: 'Nabla';
-  src: url('http://zygll.com/wp-content/uploads/Nabla.ttf') format('truetype');
-}
+  src: url('https://zygll.com/wp-content/uploads/Nabla.ttf') format('truetype');
+} */
 
 
-@font-face {
+/* @font-face {
   font-family: 'JinBuTi';
-  src: url('http://zygll.com/wp-content/uploads/JinBuTi.ttf') format('truetype');
-}
+  src: url('https://zygll.com/wp-content/uploads/JinBuTi.ttf') format('truetype');
+} */
 
 
-@font-face {
+/* @font-face {
   font-family: 'SmileySans';
-  src: url('http://zygll.com/wp-content/uploads/SmileySans.ttf') format('truetype');
-}
+  src: url('https://zygll.com/wp-content/uploads/SmileySans.ttf') format('truetype');
+} */
 
-text{
+/* text{
   font-family: 'JinBuTi';
-}
-page,view{
+} */
+/* page,view{
   font-family: 'JinBuTi';
-}
+} */
 .container {
   height: 100%;
   display: flex;
