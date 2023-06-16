@@ -579,3 +579,4 @@ search-input-placeholder {
   font-weight: 300;
   font-family: 'SmileySans';
 }
+@import "./index2.skeleton.wxss";

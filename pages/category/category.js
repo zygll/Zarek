@@ -12,6 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loading:true,
     page: 1,
     category: '',
     isBottom: false,
@@ -106,6 +107,9 @@ Page({
         args.page = this.data.page + 1
       }
       this.setData(args)
+      this.setData({
+        loading:false
+      })
       wx.stopPullDownRefresh()
     })
     .catch(err => {

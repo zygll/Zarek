@@ -1,0 +1,114 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/6/16下午4:21:31
+使用方法：
+在 C:\Users\vankeadmin\Downloads\JG2.0.0\JG2.0.0\JG2.0.0\pages\index2\index2.wxml 引入模板
+
+```
+<import src="index2.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 C:\Users\vankeadmin\Downloads\JG2.0.0\JG2.0.0\JG2.0.0\pages\index2\index2.wxss 中引入样式
+```
+@import "./index2.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="page iphone-x">
+      <view class="banner sk-pseudo sk-pseudo-circle">
+        <view class="homename">
+          <view is="ec-canvas/ec-canvas" id="mychart-dom-bar">
+            <view bindtouchend="touchEnd" bindtouchmove="touchMove" bindtouchstart="touchStart" canvas-id="mychart-bar" class="canvas--ec-canvas sk-transparent sk-text-14-2857-390 sk-text sk-image" type="2d" style="background-position-x: 50%;">绘图区域</view>
+          </view>
+        </view>
+        <view class="avatarInfo">
+          <view>
+            <view class="description sk-transparent sk-text-14-2857-807 sk-text" style="background-position-x: 50%;">
+              人生如梦，一场烟雨，半世红尘，一世浮华。
+            </view>
+          </view>
+        </view>
+        <image class="banner-bg sk-image" mode="widthFix" style="height: 812.87px;"></image>
+        <view class="index-search container-class">
+          <image class="search-icon icon-class sk-image"></image>
+          <view class="search-input input-class sk-image" placeholder="搜索你感兴趣的内容..." placeholder-class="search-input-placeholder" value="true"></view>
+        </view>
+      </view>
+      <view class="tab-content">
+        <view class="index">
+          <view class="post-item" id="256">
+            <image class="post-img sk-image" mode="aspectFill"></image>
+            <view class="post-desc">
+              <view class="post-title">
+                <text class="sk-transparent sk-text-18-7500-135 sk-text">记上一篇文章封装echars的方法如果在微信小程序使用 记录坑。。。</text>
+              </view>
+              <view class="source">
+                <view class="post-data">
+                  <image class="sk-image"></image>
+                  <text class="sk-transparent sk-opacity"> 9</text>
+                </view>
+                <view class="source-info">
+                  <text class="sk-transparent sk-text-4-1667-984 sk-text">6月15日</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="post-item" id="251">
+            <image class="post-img sk-image" mode="aspectFill"></image>
+            <view class="post-desc">
+              <view class="post-title">
+                <text class="sk-transparent sk-text-18-7500-257 sk-text">echarts当数据为空时展示空状态及占位图</text>
+              </view>
+              <view class="source">
+                <view class="post-data">
+                  <image class="sk-image"></image>
+                  <text class="sk-transparent sk-opacity"> 15</text>
+                </view>
+                <view class="source-info">
+                  <text class="sk-transparent sk-text-4-1667-107 sk-text">6月15日</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="post-item" id="227">
+            <image class="post-img sk-image" mode="aspectFill"></image>
+            <view class="post-desc">
+              <view class="post-title">
+                <text class="sk-transparent sk-text-18-7500-33 sk-text">js 写几个常用的工具类</text>
+              </view>
+              <view class="source">
+                <view class="post-data">
+                  <image class="sk-image"></image>
+                  <text class="sk-transparent sk-opacity"> 78</text>
+                </view>
+                <view class="source-info">
+                  <text class="sk-transparent sk-text-4-1667-350 sk-text">5月31日</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="post-item" id="208">
+            <image class="post-img sk-image" mode="aspectFill"></image>
+            <view class="post-desc">
+              <view class="post-title">
+                <text class="sk-transparent sk-text-18-7500-413 sk-text">Chrome 中模拟微信内置浏览器</text>
+              </view>
+              <view class="source">
+                <view class="post-data">
+                  <image class="sk-image"></image>
+                  <text class="sk-transparent sk-text-4-1667-764 sk-text"> 103</text>
+                </view>
+                <view class="source-info">
+                  <text class="sk-transparent sk-text-4-1667-897 sk-text">5月17日</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

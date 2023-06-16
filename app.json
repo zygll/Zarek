@@ -7,7 +7,8 @@
     "pages/mine/mine",
     "pages/posts/posts",
     "pages/search/search",
-    "pages/tool/tool"
+    "pages/tool/tool",
+    "pages/2048/2048"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,3 +1,5 @@
+<import src="category.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
 <view class="ui-sence-recommend">
   <view class="ui-recommend-title">
     专题栏目

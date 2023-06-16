@@ -1,54 +1,56 @@
 <!--index.wxml-->
+<import src="index2.skeleton.wxml" />
+<template is="skeleton" wx:if="{{loading}}" />
 <wxs module="hotel" src="../../utils/time.wxs"></wxs>
 <view class="page {{isIphoneX?'iphone-x':''}}">
-  <view class="banner">
-    <view class="homename">
-          <!-- {{siteInfo.name}} -->
-  <ec-canvas   id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    <view class="banner">
+        <view class="homename">
+            <!-- {{siteInfo.name}} -->
+            <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
         </view>
-    <view class="avatarInfo">
-  <view>
- 
-        <view class="description">
-          {{typing}}
-        </view>
-   
-  </view>
-  </view>
-    <image class="banner-bg" mode="widthFix" src="{{siteInfo.cover}}"></image>
-    <view class="index-search container-class">
-      <image class="search-icon icon-class" src="../../images/search.png"></image>
-      <input bindconfirm="onConfirm" bindinput="onInput" class="search-input input-class" confirmType="search" focus="{{autoFocus}}" placeholder="{{placeHolder}}" placeholderClass="search-input-placeholder" value="{{searchKey}}" wx:if="{{inputEnable}}"></input>
-      <view class="search-input" wx:else>{{placeHolder}}</view>
-      <image bindtap="onClear" class="close-btn" src="../../images/close.png" wx:if="{{searchKey}}"></image>
-    </view>
-  </view>
-  <view class="tab-content">
-    <view class="index">
-      <block wx:for="{{posts}}" wx:for-index="i" wx:key="id">
-        <view class="post-item" index="{{index}}" id="{{item.id}}" bindtap="bindDetail">
-          <image src="{{item.meta.thumbnail}}" mode="aspectFill" class="post-img"></image>
-          <view class="post-desc">
-            <view class="post-title">
-              <text>{{item.title.rendered}}</text>
+        <view class="avatarInfo">
+            <view>
+
+                <view class="description">
+                    {{typing}}
+                </view>
+
             </view>
-            <view class="source">
-              <view class="post-data">
-                <image src="../../images/viewl.png"></image>
-                <text> {{item.meta.views}}</text>
-              </view>
-              <view class="source-info">
-                <text>{{hotel.M(item.date)}}月{{hotel.D(item.date)}}日</text>
-              </view>
-            </view>
-          </view>
         </view>
-        <view class="advert" wx:if="{{advert.type == 'unit'}}">
-          <ad unit-id="{{advert.code}}"></ad>
+        <image class="banner-bg" mode="widthFix" src="{{siteInfo.cover}}"></image>
+        <view class="index-search container-class">
+            <image class="search-icon icon-class" src="../../images/search.png"></image>
+            <input bindconfirm="onConfirm" bindinput="onInput" class="search-input input-class" confirmType="search" focus="{{autoFocus}}" placeholder="{{placeHolder}}" placeholderClass="search-input-placeholder" value="{{searchKey}}" wx:if="{{inputEnable}}"></input>
+            <view class="search-input" wx:else>{{placeHolder}}</view>
+            <image bindtap="onClear" class="close-btn" src="../../images/close.png" wx:if="{{searchKey}}"></image>
         </view>
-      </block>
-      <view class="last_text" wx:if="{{isLastPage&&posts.length>0}}">已经到底啦~</view>
-      <view class="last_text" wx:if="{{!isLastPage&&posts.length>0}}">努力加载中...</view>
     </view>
-  </view>
+    <view class="tab-content">
+        <view class="index">
+            <block wx:for="{{posts}}" wx:for-index="i" wx:key="id">
+                <view class="post-item" index="{{index}}" id="{{item.id}}" bindtap="bindDetail">
+                    <image src="{{item.meta.thumbnail}}" mode="aspectFill" class="post-img"></image>
+                    <view class="post-desc">
+                        <view class="post-title">
+                            <text>{{item.title.rendered}}</text>
+                        </view>
+                        <view class="source">
+                            <view class="post-data">
+                                <image src="../../images/viewl.png"></image>
+                                <text> {{item.meta.views}}</text>
+                            </view>
+                            <view class="source-info">
+                                <text>{{hotel.M(item.date)}}月{{hotel.D(item.date)}}日</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="advert" wx:if="{{advert.type == 'unit'}}">
+                    <ad unit-id="{{advert.code}}"></ad>
+                </view>
+            </block>
+            <view class="last_text" wx:if="{{isLastPage&&posts.length>0}}">已经到底啦~</view>
+            <view class="last_text" wx:if="{{!isLastPage&&posts.length>0}}">努力加载中...</view>
+        </view>
+    </view>
 </view>

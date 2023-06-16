@@ -10,9 +10,10 @@
   text-align: center;
 }
 .pic{
- width: 50rpx;
- height: 50rpx;
- margin: 0 auto;
+  padding: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
 }
 image{
   width: 100%;

@@ -16,7 +16,7 @@ function initChart(canvas, width, height, dpr) {
           left: 'center',
           top: 'center',
           style: {
-            text: 'Zreak',
+            text: 'Zarek',
             fontSize: 30,
             fontWeight: 'bold',
             lineDash: [0, 100],
@@ -64,7 +64,9 @@ function initChart(canvas, width, height, dpr) {
 const API = require('../../utils/api')
 var timer = null;
 Page({
+  
   data: {
+    loading:true,
     ec: {
       onInit: initChart // 渲染logo
     },
@@ -259,6 +261,9 @@ Page({
   },
 
   getPostList: function (data) {
+    this.setData({
+      loading:true
+    })
     API.getPostsList(data).then(res => {
         let args = {}
         if (res.length < 10) {
@@ -276,6 +281,9 @@ Page({
           args.page = this.data.page + 1
         }
         this.setData(args)
+        this.setData({
+          loading:false
+        })
         wx.stopPullDownRefresh()
       })
       .catch(err => {

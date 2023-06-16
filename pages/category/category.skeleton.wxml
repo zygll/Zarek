@@ -1,0 +1,88 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/6/16下午4:42:17
+使用方法：
+在 C:\Users\vankeadmin\Downloads\JG2.0.0\JG2.0.0\JG2.0.0\pages\category\category.wxml 引入模板
+
+```
+<import src="category.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 C:\Users\vankeadmin\Downloads\JG2.0.0\JG2.0.0\JG2.0.0\pages\category\category.wxss 中引入样式
+```
+@import "./category.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="ui-sence-recommend">
+      <view class="ui-recommend-title sk-transparent sk-text-14-2857-411 sk-text">
+        专题栏目
+      </view>
+      <view class="ui-commend-subtitle sk-transparent">
+        最新、最全、最具特色的资讯
+        <view class="cell-arrow-top">
+          <image class="sk-image"></image>
+        </view>
+      </view>
+      <view class="ui-sence-list">
+        <view class="ui-sence-item" data-item="[object Object]" id="1">
+          <view class="cell-sence-icon">
+            <image class="sk-image"></image>
+          </view>
+          <view class="cell-content-box">
+            <view class="cell-content">
+              <view class="cell-title text-overflow sk-transparent sk-text-14-2857-604 sk-text">就是玩
+              </view>
+              <view class="cell-subtitle"></view>
+              <view class="cell-description">
+                <view class="cell-time sk-transparent sk-text-14-2857-439 sk-text">12篇文章</view>
+              </view>
+            </view>
+            <view class="cell-link">
+              <text class="icon-right-arrow"></text>
+            </view>
+          </view>
+        </view>
+        <view class="ui-sence-item" data-item="[object Object]" id="4">
+          <view class="cell-sence-icon">
+            <image class="sk-image"></image>
+          </view>
+          <view class="cell-content-box">
+            <view class="cell-content">
+              <view class="cell-title text-overflow sk-transparent sk-text-14-2857-38 sk-text">图片
+              </view>
+              <view class="cell-subtitle"></view>
+              <view class="cell-description">
+                <view class="cell-time sk-transparent sk-text-14-2857-307 sk-text">0篇文章</view>
+              </view>
+            </view>
+            <view class="cell-link">
+              <text class="icon-right-arrow"></text>
+            </view>
+          </view>
+        </view>
+        <view class="ui-sence-item" data-item="[object Object]" id="7">
+          <view class="cell-sence-icon">
+            <image class="sk-image"></image>
+          </view>
+          <view class="cell-content-box">
+            <view class="cell-content">
+              <view class="cell-title text-overflow sk-transparent sk-text-14-2857-716 sk-text">日记
+              </view>
+              <view class="cell-subtitle"></view>
+              <view class="cell-description">
+                <view class="cell-time sk-transparent sk-text-14-2857-670 sk-text">1篇文章</view>
+              </view>
+            </view>
+            <view class="cell-link">
+              <text class="icon-right-arrow"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

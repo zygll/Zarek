@@ -127,3 +127,4 @@
   color: #bfbfbf;
   line-height: 144rpx;
 }
+@import "./category.skeleton.wxss";
